@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+   certbot-service:
+     build:
+        context: ./
+        args:
+          - primary_domain=digatrain.com 
+          - secondary_domains=www.digatrain.com mon.digatrain.com
+          - email=keith_baldwin@outlook.com
+     restart: always  
+     image: certbot
+     container_name: certbotRenew
+     ports:
+       - 443:443
+     volumes:     
+       - ./files/SSLCerts:/etc/letsencrypt/:rw
