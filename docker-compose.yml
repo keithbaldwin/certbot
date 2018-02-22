@@ -4,9 +4,9 @@ services:
      build:
         context: ./
         args:
-          - primary_domain=digatrain.com 
-          - secondary_domains=www.digatrain.com mon.digatrain.com
-          - email=keith_baldwin@outlook.com
+          - primary_domain=****
+          - secondary_domains=******
+          - email=*******
      restart: always  
      image: certbot
      container_name: certbotRenew
